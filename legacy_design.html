@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" dir="rtl" lang="he">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>דוד שילוח | אסטרטגיה, חדשנות וטכנולוגיה</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2563EB", 
+                        "primary-dark": "#1e40af",
+                        "text-main": "#0f172a",
+                        "text-muted": "#64748b",
+                        "bg-light": "#f8fafc",
+                        "bg-dark": "#0B1121", 
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#151e32",
+                    },
+                    fontFamily: {
+                        "display": ["Heebo", "sans-serif"],
+                        "body": ["Heebo", "sans-serif"],
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                        'glow': '0 0 15px rgba(37, 99, 235, 0.3)',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'fade-in': 'fadeIn 1s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Heebo', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .dark .glass {
+            background: rgba(11, 17, 33, 0.85);
+        }
+    </style>
+</head>
+<body class="bg-bg-light dark:bg-bg-dark text-text-main dark:text-gray-100 transition-colors duration-300">
+    
+    <!-- Top Navigation Bar -->
+    <div class="fixed w-full top-0 z-50 glass border-b border-slate-200 dark:border-white/5 transition-all duration-300">
+        <div class="w-full max-w-[1400px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center gap-4 cursor-pointer group">
+                <div class="size-10 flex items-center justify-center bg-primary text-white rounded-xl shadow-glow transition-transform group-hover:scale-105">
+                    <span class="material-symbols-rounded">terminal</span>
+                </div>
+                <div class="flex flex-col">
+                    <h2 class="text-text-main dark:text-white text-lg font-black tracking-tight leading-none">דוד שילוח</h2>
+                    <span class="text-xs text-text-muted font-medium tracking-wide">TECH & STRATEGY</span>
+                </div>
+            </div>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-10">
+                <a class="text-sm font-bold text-text-main dark:text-white hover:text-primary transition-colors" href="#">ראשי</a>
+                <a class="text-sm font-medium text-text-muted dark:text-gray-400 hover:text-primary transition-colors" href="#">מאמרים</a>
+                <a class="text-sm font-medium text-text-muted dark:text-gray-400 hover:text-primary transition-colors" href="#">הרצאות</a>
+                <a class="text-sm font-medium text-text-muted dark:text-gray-400 hover:text-primary transition-colors" href="#">אודות</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-4">
+                <button class="hidden md:flex items-center justify-center size-10 rounded-full hover:bg-slate-100 dark:hover:bg-white/5 text-text-muted transition-colors">
+                     <span class="material-symbols-rounded">search</span>
+                </button>
+                <button class="flex items-center gap-2 bg-text-main dark:bg-white text-white dark:text-bg-dark px-5 py-2.5 rounded-lg text-sm font-bold hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                    <span>הרשמה לניוזלטר</span>
+                    <span class="material-symbols-rounded text-[18px]">arrow_back</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex flex-col items-center pt-24">
+        
+        <!-- Hero Section -->
+        <section class="w-full max-w-[1400px] px-6 md:px-12 py-16 md:py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- Content -->
+                <div class="flex flex-col gap-8 text-right order-2 lg:order-1 opacity-0 animate-[fadeInUp_0.8s_ease-out_forwards]">
+                    <div class="inline-flex self-start items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/20 text-primary text-xs font-bold tracking-wider uppercase border border-blue-100 dark:border-blue-500/10">
+                        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                        Innovation & Strategy Blog
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-black text-text-main dark:text-white leading-[1.1] tracking-tight">
+                        לחקור את העתיד,<br/>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-l from-primary to-purple-600">להבין את ההווה.</span>
+                    </h1>
+                    <p class="text-xl text-text-muted dark:text-gray-400 leading-relaxed max-w-xl">
+                        בלוג מקצועי העוסק בצומת שבין בינה מלאכותית, פסיכולוגיה צרכנית ואסטרטגיה עסקית. הצטרפו למסע לגילוי הטכנולוגיות שמעצבות את חיינו.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mt-2">
+                        <button class="h-12 px-8 bg-primary hover:bg-primary-dark text-white text-base font-bold rounded-lg shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all duration-300">
+                            התחילו לקרוא
+                        </button>
+                        <button class="h-12 px-8 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 text-text-main dark:text-white text-base font-bold rounded-lg hover:bg-slate-50 dark:hover:bg-white/10 transition-all duration-300 flex items-center gap-2">
+                            <span class="material-symbols-rounded">podcasts</span>
+                            הפודקאסט
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Image -->
+                <div class="relative order-1 lg:order-2 opacity-0 animate-[fadeInUp_0.8s_ease-out_0.2s_forwards]">
+                    <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" 
+                             style="background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop');">
+                        </div>
+                    </div>
+                    <!-- Decorative Elements -->
+                    <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+                    <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl -z-10"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="w-full max-w-[1400px] px-6 md:px-12 mb-16 opacity-0 animate-[fadeInUp_0.8s_ease-out_0.4s_forwards]">
+            <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pb-6 border-b border-slate-200 dark:border-white/5">
+                <button class="h-10 px-6 rounded-full bg-text-main text-white text-sm font-bold shadow-lg shadow-slate-900/10 transition-transform active:scale-95">
+                    הכל
+                </button>
+                <button class="h-10 px-6 rounded-full bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/5 text-text-muted dark:text-gray-300 text-sm font-medium hover:border-primary hover:text-primary transition-all active:scale-95 flex items-center gap-2">
+                    <span class="material-symbols-rounded text-lg">psychology</span>
+                    בינה מלאכותית
+                </button>
+                <button class="h-10 px-6 rounded-full bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/5 text-text-muted dark:text-gray-300 text-sm font-medium hover:border-primary hover:text-primary transition-all active:scale-95 flex items-center gap-2">
+                    <span class="material-symbols-rounded text-lg">design_services</span>
+                    עיצוב וחוויה
+                </button>
+                <button class="h-10 px-6 rounded-full bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/5 text-text-muted dark:text-gray-300 text-sm font-medium hover:border-primary hover:text-primary transition-all active:scale-95 flex items-center gap-2">
+                    <span class="material-symbols-rounded text-lg">rocket_launch</span>
+                    אסטרטגיה
+                </button>
+            </div>
+        </section>
+
+        <!-- Featured Articles -->
+        <section class="w-full max-w-[1400px] px-6 md:px-12 mb-24 opacity-0 animate-[fadeInUp_0.8s_ease-out_0.5s_forwards]">
+            <div class="flex items-end justify-between mb-8">
+                <div>
+                    <h2 class="text-3xl font-black text-text-main dark:text-white tracking-tight">נבחרים מהבלוג</h2>
+                    <p class="text-text-muted dark:text-gray-400 mt-2">המאמרים שקיבלו הכי הרבה תגובות השבוע</p>
+                </div>
+                <a class="hidden md:flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all" href="#">
+                    לכל המאמרים
+                    <span class="material-symbols-rounded">arrow_back</span>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <article class="group relative flex flex-col bg-surface-light dark:bg-surface-dark rounded-2xl overflow-hidden border border-slate-100 dark:border-white/5 shadow-soft hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="relative w-full aspect-[16/10] overflow-hidden">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" 
+                             style="background-image: url('https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop');"></div>
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-primary text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm">
+                            AI REVOLUTION
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col gap-3 flex-1">
+                        <div class="flex items-center gap-2 text-xs text-text-muted font-medium mb-1">
+                            <span class="material-symbols-rounded text-base">schedule</span>
+                            5 דקות קריאה
+                            <span class="mx-1">•</span>
+                            10 ינואר, 2026
+                        </div>
+                        <h3 class="text-xl font-bold text-text-main dark:text-white leading-tight group-hover:text-primary transition-colors">
+                            האם ה-AGI כבר כאן? ניתוח מצב
+                        </h3>
+                        <p class="text-text-muted dark:text-gray-400 text-sm leading-relaxed line-clamp-3">
+                            המודלים החדשים של OpenAI ו-Google מציגים יכולות שהיו נחשבות למדע בדיוני רק לפני שנה. האם אנחנו בדרך לבינה מלאכותית כללית?
+                        </p>
+                        <div class="mt-auto pt-6 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="size-8 rounded-full bg-slate-200 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop');"></div>
+                                <span class="text-xs font-bold text-text-main dark:text-white">דוד שילוח</span>
+                            </div>
+                            <span class="text-primary font-bold text-sm group-hover:translate-x-[-4px] transition-transform">קרא עוד</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="group relative flex flex-col bg-surface-light dark:bg-surface-dark rounded-2xl overflow-hidden border border-slate-100 dark:border-white/5 shadow-soft hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="relative w-full aspect-[16/10] overflow-hidden">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" 
+                             style="background-image: url('https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2000&auto=format&fit=crop');"></div>
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-purple-600 text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm">
+                            UX DESIGN
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col gap-3 flex-1">
+                        <div class="flex items-center gap-2 text-xs text-text-muted font-medium mb-1">
+                            <span class="material-symbols-rounded text-base">schedule</span>
+                            8 דקות קריאה
+                            <span class="mx-1">•</span>
+                            08 ינואר, 2026
+                        </div>
+                        <h3 class="text-xl font-bold text-text-main dark:text-white leading-tight group-hover:text-primary transition-colors">
+                            מיקרו-קופי: המילים שעושות את ההבדל
+                        </h3>
+                        <p class="text-text-muted dark:text-gray-400 text-sm leading-relaxed line-clamp-3">
+                            איך טקסטים קטנים בממשק יכולים לשפר את אחוזי ההמרה בעשרות אחוזים, ומה אנחנו יכולים ללמוד מאפליקציות מובילות.
+                        </p>
+                        <div class="mt-auto pt-6 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="size-8 rounded-full bg-slate-200 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop');"></div>
+                                <span class="text-xs font-bold text-text-main dark:text-white">דוד שילוח</span>
+                            </div>
+                            <span class="text-primary font-bold text-sm group-hover:translate-x-[-4px] transition-transform">קרא עוד</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="group relative flex flex-col bg-surface-light dark:bg-surface-dark rounded-2xl overflow-hidden border border-slate-100 dark:border-white/5 shadow-soft hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="relative w-full aspect-[16/10] overflow-hidden">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" 
+                             style="background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop');"></div>
+                         <div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-pink-600 text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm">
+                            DIGITAL STRATEGY
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col gap-3 flex-1">
+                        <div class="flex items-center gap-2 text-xs text-text-muted font-medium mb-1">
+                            <span class="material-symbols-rounded text-base">schedule</span>
+                            6 דקות קריאה
+                            <span class="mx-1">•</span>
+                            05 ינואר, 2026
+                        </div>
+                        <h3 class="text-xl font-bold text-text-main dark:text-white leading-tight group-hover:text-primary transition-colors">
+                            טרנספורמציה דיגיטלית בארגוני ענק
+                        </h3>
+                        <p class="text-text-muted dark:text-gray-400 text-sm leading-relaxed line-clamp-3">
+                            למה רוב פרויקטי הטרנספורמציה נכשלים, ומהם שלושת עמודי התווך להצלחה בעידן הפוסט-קורונה.
+                        </p>
+                        <div class="mt-auto pt-6 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="size-8 rounded-full bg-slate-200 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop');"></div>
+                                <span class="text-xs font-bold text-text-main dark:text-white">דוד שילוח</span>
+                            </div>
+                            <span class="text-primary font-bold text-sm group-hover:translate-x-[-4px] transition-transform">קרא עוד</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="w-full bg-text-main text-white py-20 px-6 overflow-hidden relative">
+            <!-- Background Decoration -->
+            <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+            <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+            
+            <div class="max-w-[800px] mx-auto text-center flex flex-col gap-8 items-center relative z-10">
+                <div class="flex flex-col gap-4">
+                    <div class="size-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/10">
+                         <span class="material-symbols-rounded text-3xl">mail</span>
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-black tracking-tight">הצטרפו לקהילה</h2>
+                    <p class="text-gray-400 text-lg max-w-lg mx-auto">קבלו את התוכן הטוב ביותר שלנו ישירות לתיבת המייל. בלי ספאם, רק ערך.</p>
+                </div>
+                <form class="flex flex-col md:flex-row gap-3 w-full max-w-lg mt-4">
+                    <input class="flex-1 h-14 rounded-xl px-6 bg-white/5 border border-white/10 text-white placeholder:text-gray-500 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" placeholder="כתובת האימייל שלך" type="email"/>
+                    <button class="h-14 px-8 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl transition-all shadow-lg shadow-primary/25" type="submit">הרשמה</button>
+                </form>
+                <p class="text-gray-500 text-xs mt-2">הצטרפו ל-15,000+ מנויים מרוצים</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="w-full bg-surface-light dark:bg-bg-dark border-t border-slate-200 dark:border-white/5 pt-16 pb-8 px-6 md:px-12">
+            <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2 flex flex-col gap-6">
+                    <div class="flex items-center gap-3">
+                        <div class="size-8 flex items-center justify-center bg-primary text-white rounded-lg">
+                            <span class="material-symbols-rounded text-sm">terminal</span>
+                        </div>
+                        <h2 class="text-text-main dark:text-white text-xl font-black tracking-tight">דוד שילוח</h2>
+                    </div>
+                    <p class="text-text-muted dark:text-gray-400 leading-relaxed max-w-sm">
+                        עוזר למותגים וחברות לפצח את האתגר הבא שלהם באמצעות חדשנות דיגיטלית, אסטרטגיה מבוססת נתונים ועיצוב חווית משתמש מתקדמת.
+                    </p>
+                    <div class="flex gap-3 mt-2">
+                        <a class="size-10 flex items-center justify-center rounded-full bg-slate-100 dark:bg-white/5 text-text-muted hover:bg-primary hover:text-white transition-all" href="#">
+                            <span class="material-symbols-rounded text-lg">public</span>
+                        </a> <!-- Linked in / Web -->
+                        <a class="size-10 flex items-center justify-center rounded-full bg-slate-100 dark:bg-white/5 text-text-muted hover:bg-primary hover:text-white transition-all" href="#">
+                            <span class="material-symbols-rounded text-lg">alternate_email</span>
+                        </a> <!-- Twitter -->
+                         <a class="size-10 flex items-center justify-center rounded-full bg-slate-100 dark:bg-white/5 text-text-muted hover:bg-primary hover:text-white transition-all" href="#">
+                            <span class="material-symbols-rounded text-lg">mail</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col gap-4">
+                    <h4 class="text-text-main dark:text-white font-bold">ניווט</h4>
+                    <ul class="flex flex-col gap-3">
+                        <li><a class="text-text-muted dark:text-gray-400 hover:text-primary transition-colors text-sm" href="#">ראשי</a></li>
+                        <li><a class="text-text-muted dark:text-gray-400 hover:text-primary transition-colors text-sm" href="#">מאמרים</a></li>
+                        <li><a class="text-text-muted dark:text-gray-400 hover:text-primary transition-colors text-sm" href="#">הרצאות</a></li>
+                        <li><a class="text-text-muted dark:text-gray-400 hover:text-primary transition-colors text-sm" href="#">יצירת קשר</a></li>
+                    </ul>
+                </div>
+                 <div class="flex flex-col gap-4">
+                    <h4 class="text-text-main dark:text-white font-bold">נושאים פופולריים</h4>
+                    <ul class="flex flex-col gap-3">
+                        <li><a class="text-text-muted dark:text-gray-400 hover:text-primary transition-colors text-sm" href="#">בינה מלאכותית</a></li>
+                        <li><a class="text-text-muted dark:text-gray-400 hover:text-primary transition-colors text-sm" href="#">עיצוב מוצר</a></li>
+                        <li><a class="text-text-muted dark:text-gray-400 hover:text-primary transition-colors text-sm" href="#">פיתוח עסקי</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="max-w-[1400px] mx-auto pt-8 border-t border-slate-200 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-text-muted dark:text-gray-500 text-sm">© 2026 דוד שילוח. כל הזכויות שמורות.</p>
+                <p class="text-text-muted dark:text-gray-500 text-sm flex items-center gap-1">
+                    נבנה עם <span class="text-red-500">❤</span> וטכנולוגיה מתקדמת
+                </p>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
