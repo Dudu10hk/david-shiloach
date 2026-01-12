@@ -1,0 +1,32 @@
+# David Shiloach - Tech & Strategy Blog
+
+Welcome to the official blog of David Shiloach. This site explores the intersection of Artificial Intelligence, User Experience (UX), and Business Strategy.
+
+## Site Summary
+- **Author**: David Shiloach (Tech & Strategy Expert)
+- **Main Topics**: AI, AGI, UX Design, Digital Transformation, Strategy
+- **Language**: Hebrew (Primary)
+
+## Key Articles
+
+### AI & Future Tech
+- **Title**: האם ה-AGI כבר כאן? ניתוח מצב (Is AGI Already Here?)
+- **Summary**: Analysis of recent GPT-6 and Gemini Ultra 2.0 models and the path to Artificial General Intelligence.
+- **URL**: https://david-shiloach-blog.vercel.app/blog/agi-revolution-2026
+
+### UX Design
+- **Title**: מיקרו-קופי: המילים שעושות את ההבדל (Micro-copy: The Words That Make the Difference)
+- **Summary**: How small text changes in UI can impact conversion rates by tens of percent.
+- **URL**: https://david-shiloach-blog.vercel.app/blog/micro-copy-ux-design
+
+### Strategy
+- **Title**: טרנספורמציה דיגיטלית בארגוני ענק (Digital Transformation in Enterprises)
+- **Summary**: Why most transformation projects fail and the 3 pillars of success.
+- **URL**: https://david-shiloach-blog.vercel.app/blog/digital-transformation-enterprise
+
+## About
+David Shiloach helps organizations crack their next challenge through digital innovation, data-driven strategy, and advanced UX design.
+
+## Connect
+- **LinkedIn**: https://www.linkedin.com/in/david-shiloach/
+- **Website**: https://david-shiloach-blog.vercel.app/

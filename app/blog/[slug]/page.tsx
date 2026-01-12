@@ -107,7 +107,7 @@ export default async function BlogPost({
                             className="absolute inset-0 bg-cover bg-center"
                             style={{ backgroundImage: `url('${article.image}')` }}
                             role="img"
-                            aria-label={article.title}
+                            aria-label={(article as any).imageAlt || article.title}
                         ></div>
                     </div>
 

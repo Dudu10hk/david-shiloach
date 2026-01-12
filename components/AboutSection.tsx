@@ -52,7 +52,7 @@ export function AboutSection() {
 
                     {/* Image Column */}
                     <div className="order-1 lg:order-2 relative group opacity-0 animate-fade-in-up animate-delay-200">
-                        <div className="relative aspect-square max-w-[500px] mx-auto">
+                        <div className="relative aspect-square max-w-[380px] mx-auto">
                             {/* Decorative framing */}
                             <div className="absolute inset-4 border-2 border-dashed border-slate-200 dark:border-white/10 rounded-2xl rotate-3 transition-transform group-hover:rotate-6 duration-700"></div>
 
