@@ -36,7 +36,6 @@ export function Footer() {
                     <ul className="flex flex-col gap-3">
                         <li><a className="text-slate-500 dark:text-gray-400 hover:text-blue-600 transition-colors text-sm" href="/">ראשי</a></li>
                         <li><a className="text-slate-500 dark:text-gray-400 hover:text-blue-600 transition-colors text-sm" href="/blog">מאמרים</a></li>
-                        <li><a className="text-slate-500 dark:text-gray-400 hover:text-blue-600 transition-colors text-sm" href="#">הרצאות</a></li>
                         <li><a className="text-slate-500 dark:text-gray-400 hover:text-blue-600 transition-colors text-sm" href="#about">יצירת קשר</a></li>
                     </ul>
                 </div>
