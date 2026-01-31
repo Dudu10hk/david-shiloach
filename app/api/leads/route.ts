@@ -16,15 +16,20 @@ export async function POST(request: Request) {
             timestamp: new Date().toISOString(),
         };
 
-        // Check if we are in production (Vercel) by checking for KV environment variables
         const isKVEnabled = process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN;
+        const isVercel = process.env.VERCEL === '1';
+
+        console.log(`Lead submission attempt: ${email}. isKVEnabled: ${!!isKVEnabled}, isVercel: ${isVercel}`);
 
         if (isKVEnabled) {
-            // Store in Vercel KV (Redis)
-            // We use an LPUSH or similar to keep a list of leads
+            console.log('Attempting to save to Vercel KV...');
             await kv.lpush('leads', JSON.stringify(newLead));
+            console.log('Successfully saved to Vercel KV');
+        } else if (isVercel) {
+            console.error('CRITICAL: Running on Vercel but KV environment variables are missing!');
+            return NextResponse.json({ error: 'Storage not configured. Please connect Vercel KV.' }, { status: 500 });
         } else {
-            // Local fallback to filesystem
+            console.log('Running locally, saving to leads.json...');
             const leadsFilePath = path.join(process.cwd(), 'leads.json');
 
             let leads = [];
@@ -39,11 +44,12 @@ export async function POST(request: Request) {
 
             leads.push(newLead);
             fs.writeFileSync(leadsFilePath, JSON.stringify(leads, null, 2));
+            console.log('Successfully saved to leads.json');
         }
 
         return NextResponse.json({ success: true });
-    } catch (error) {
+    } catch (error: any) {
         console.error('Error saving lead:', error);
-        return NextResponse.json({ error: 'Failed to save lead' }, { status: 500 });
+        return NextResponse.json({ error: 'Failed to save lead', details: error.message }, { status: 500 });
     }
 }
