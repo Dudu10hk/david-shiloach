@@ -364,45 +364,6 @@ export const siteContent = {
       }
     ]
   },
-  lecturesSection: {
-    title: "הרצאות וסדנאות",
-    subtitle: "הרצאות מקצועיות המשלבות תיאוריה ופרקטיקה",
-    linkText: "לכל ההרצאות",
-    items: [
-      {
-        id: "vibe-coding",
-        title: "Vibe Coding",
-        description: "איך ליצור תוכנה ומוצרים דיגיטליים באמצעות AI גם ללא ידע מוקדם בקוד. הכלים החדשים שמשנים את כללי המשחק.",
-        icon: "code",
-        color: "blue",
-        gradient: null
-      },
-      {
-        id: "ux",
-        title: "UX - חווית משתמש",
-        description: "עקרונות לתכנון מוצרים דיגיטליים מנצחים. איך להבין את המשתמשים ולייצר עבורם ערך אמיתי דרך עיצוב.",
-        icon: "design_services",
-        color: "purple",
-        gradient: null
-      },
-      {
-        id: "ai",
-        title: "מהפכת ה-AI",
-        description: "סקירה מעמיקה של כלי ה-AI המובילים בשוק, לאן התחום הולך ואיך אפשר להשתלב בו כבר היום.",
-        icon: "psychology",
-        color: "green",
-        gradient: null
-      },
-      {
-        id: "combined",
-        title: "לחבר נקודות - לפתוח את הראש",
-        description: "הרצאת דגל משולבת (90 דקות): מסע מרתק שמחבר בין עולמות ה-Vibe Coding, UX ו-AI לתמונה אחת ברורה שתעשה לכם סדר.",
-        icon: "hub",
-        color: "primary",
-        gradient: "from-blue-600/5 to-purple-500/5"
-      }
-    ]
-  },
   newsletter: {
     title: "הצטרפו לקהילה",
     description: "קבלו את התוכן הטוב ביותר שלנו ישירות לתיבת המייל. בלי ספאם, רק ערך.",

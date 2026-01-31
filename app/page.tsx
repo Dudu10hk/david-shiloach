@@ -3,7 +3,6 @@ import { Hero } from "@/components/Hero";
 import { Categories } from "@/components/Categories";
 import { FeaturedArticles } from "@/components/FeaturedArticles";
 import { AboutSection } from "@/components/AboutSection";
-import { LecturesSection } from "@/components/LecturesSection";
 import { Newsletter } from "@/components/Newsletter";
 import { Footer } from "@/components/Footer";
 
@@ -15,7 +14,6 @@ export default function Home() {
         <Hero />
         <Categories />
         <FeaturedArticles />
-        <LecturesSection />
         <AboutSection />
         <Newsletter />
         <Footer />
