@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Categories } from "@/components/Categories";
@@ -12,7 +13,9 @@ export default function Home() {
       <Header />
       <main className="flex flex-col items-center w-full">
         <Hero />
-        <Categories />
+        <Suspense fallback={<div className="h-20 w-full animate-pulse bg-slate-100 dark:bg-slate-800 rounded-xl mb-16"></div>}>
+          <Categories />
+        </Suspense>
         <FeaturedArticles />
         <AboutSection />
         <Newsletter />
