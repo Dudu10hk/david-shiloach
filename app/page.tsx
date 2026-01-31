@@ -15,8 +15,8 @@ export default function Home() {
         <Hero />
         <Suspense fallback={<div className="h-20 w-full animate-pulse bg-slate-100 dark:bg-slate-800 rounded-xl mb-16"></div>}>
           <Categories />
+          <FeaturedArticles />
         </Suspense>
-        <FeaturedArticles />
         <AboutSection />
         <Newsletter />
         <Footer />
