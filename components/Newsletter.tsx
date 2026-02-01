@@ -7,12 +7,14 @@ export function Newsletter() {
     const { title, description, placeholder, buttonText, subtext } = siteContent.newsletter;
     const [email, setEmail] = useState("");
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+    const [errorDetails, setErrorDetails] = useState("");
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!email) return;
 
         setStatus("loading");
+        setErrorDetails("");
         try {
             const response = await fetch("/api/leads", {
                 method: "POST",
@@ -20,15 +22,19 @@ export function Newsletter() {
                 body: JSON.stringify({ email }),
             });
 
+            const data = await response.json();
+
             if (response.ok) {
                 setStatus("success");
                 setEmail("");
             } else {
                 setStatus("error");
+                setErrorDetails(data.error || "שגיאה לא ידועה");
             }
-        } catch (error) {
+        } catch (error: any) {
             console.error(error);
             setStatus("error");
+            setErrorDetails("לא ניתן להתחבר לשרת");
         }
     };
 
@@ -77,7 +83,10 @@ export function Newsletter() {
                 )}
 
                 {status === "error" && (
-                    <p className="text-red-400 text-sm">אופס, משהו השתבש. נסו שוב מאוחר יותר.</p>
+                    <div className="flex flex-col gap-1">
+                        <p className="text-red-400 text-sm font-bold">אופס, משהו השתבש.</p>
+                        <p className="text-red-400/80 text-xs text-ltr">Error: {errorDetails}</p>
+                    </div>
                 )}
 
                 <p className="text-gray-500 text-xs mt-2">{subtext}</p>
